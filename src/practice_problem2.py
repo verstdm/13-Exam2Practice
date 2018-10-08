@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,6 +55,38 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+
+    input_list = [2, 1, 5, -1, 0]
+    expected_list = [5, 4, 8, 2, 3]
+    actual_list = practice_problem2a(input_list, 3)
+    print()
+    print('Test 1')
+    print('Expected:   ', expected_list)
+    print('Actual:     ', actual_list)
+
+    input_list = [2, 1, 5, -1, 0]
+    expected_list = [0, -1, 3, -3, -2]
+    actual_list = practice_problem2a(input_list, -2)
+    print()
+    print('Test 2')
+    print('Expected:   ', expected_list)
+    print('Actual:     ', actual_list)
+
+    input_list = [2, 1, 5, -1, 0]
+    expected_list = [-3, -4, 0, -6, -5]
+    actual_list = practice_problem2a(input_list, -5)
+    print()
+    print('Test 3')
+    print('Expected:   ', expected_list)
+    print('Actual:     ', actual_list)
+
+    input_list = [2, 1, 5, -1, 0]
+    expected_list = [102, 101, 105, 99, 100]
+    actual_list = practice_problem2a(input_list, 100)
+    print()
+    print('Test 4')
+    print('Expected:   ', expected_list)
+    print('Actual:     ', actual_list)
 
 
 def practice_problem2a(sequence, delta):
@@ -76,13 +108,16 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+    for i in range(len(sequence)):
+        sequence[i] = sequence[i] + delta
+    return sequence
 
 
 def run_test_practice_problem2b():
@@ -170,13 +205,18 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    s = ''
+    for i in range(len(sequence)):
+        if not sequence[i] == '':
+            s = s + sequence[i][0]
+    return s
 
 
 # ----------------------------------------------------------------------
