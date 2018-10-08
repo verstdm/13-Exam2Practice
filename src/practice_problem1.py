@@ -393,7 +393,7 @@ class Box(object):
         self.append_string(other_box.contents)
         other_box.contents = other_box.shrink(self.volume - len(self.c0))
         other_box.volume = other_box.v0
-        
+
     def get_history(self):
         """
         What comes in:
